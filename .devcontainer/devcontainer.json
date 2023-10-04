@@ -10,7 +10,8 @@
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
-	"postCreateCommand": "sudo .devcontainer/post-create.sh",
+	"waitFor": "onCreateCommand",
+	"postCreateCommand": "sudo bash .devcontainer/post-create.sh",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
@@ -52,7 +53,28 @@
 				// Others
 				"streetsidesoftware.code-spell-checker",
 				"vscode-icons-team.vscode-icons",
-			]
+			],
+			"settings": {
+				"diffEditor.renderSideBySide": false,
+				"editor.accessibilitySupport": "on",
+				"editor.formatOnPaste": true,
+				"editor.formatOnSave": true,
+				"editor.formatOnType": true,
+				"editor.inlineSuggest.enabled": true,
+				"editor.linkedEditing": true,
+				"editor.rulers": [
+					120
+				],
+				"editor.unicodeHighlight.nonBasicASCII": false,
+				"files.autoSave": "onFocusChange",
+				"files.insertFinalNewline": true,
+				"files.trimTrailingWhitespace": true,
+				"git.ignoreRebaseWarning": true,
+				"window.commandCenter": true,
+				"window.menuBarVisibility": "classic",
+				"workbench.sideBar.location": "right",
+				"workbench.colorTheme": "Default Light Modern"
+			}
 		}
 	},
 	"remoteEnv": {
